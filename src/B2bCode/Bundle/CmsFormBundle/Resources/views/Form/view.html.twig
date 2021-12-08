@@ -1,6 +1,6 @@
-{% extends '@OroUI/actions/view.html.twig' %}
-{% import '@OroDataGrid/macros.html.twig' as dataGrid %}
-{% import '@OroUI/macros.html.twig' as UI %}
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+{% import 'OroDataGridBundle::macros.html.twig' as dataGrid %}
+{% import 'OroUIBundle::macros.html.twig' as UI %}
 
 {% oro_title_set({params : {"%name%": entity.name }}) %}
 
@@ -66,6 +66,7 @@
                     {{ UI.renderProperty('b2bcode.cmsform.name.label'|trans, entity.name) }}
                     {{ UI.renderProperty('b2bcode.cmsform.alias.label'|trans, entity.alias) }}
                     {{ UI.renderHtmlProperty('b2bcode.cmsform.sections.preview'|trans, preview) }}
+                    {{ UI.renderHtmlProperty('b2bcode.cmsform.redirect_url.label'|trans, entity.redirectUrl) }}
                     {{ UI.renderProperty('b2bcode.cmsform.notifications_enabled.label'|trans, entity.notificationsEnabled ? 'Yes'|trans : 'No'|trans) }}
                     {{ UI.renderHtmlProperty('b2bcode.cmsform.sections.notifications.label'|trans, notifications) }}
                     {{ UI.renderHtmlProperty('b2bcode.cmsform.sections.code_markup'|trans, codeMarkup) }}
