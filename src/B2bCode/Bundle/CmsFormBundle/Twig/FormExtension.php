@@ -14,8 +14,9 @@ namespace B2bCode\Bundle\CmsFormBundle\Twig;
 use B2bCode\Bundle\CmsFormBundle\Builder\FormBuilderInterface;
 use B2bCode\Bundle\CmsFormBundle\Provider\GeneralFieldProvider;
 use Symfony\Component\Form\FormRendererInterface;
+use Twig\Extension\AbstractExtension;
 
-class FormExtension extends \Twig_Extension
+class FormExtension extends AbstractExtension
 {
     /** @var FormBuilderInterface */
     protected $formBuilder;

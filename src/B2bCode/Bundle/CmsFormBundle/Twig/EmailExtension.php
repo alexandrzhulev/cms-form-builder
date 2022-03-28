@@ -12,8 +12,9 @@
 namespace B2bCode\Bundle\CmsFormBundle\Twig;
 
 use B2bCode\Bundle\CmsFormBundle\Entity\CmsFormResponse;
+use Twig\Extension\AbstractExtension;
 
-class EmailExtension extends \Twig_Extension
+class EmailExtension extends AbstractExtension
 {
     /**
      * {@inheritDoc}
