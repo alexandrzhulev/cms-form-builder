@@ -13,6 +13,7 @@ namespace B2bCode\Bundle\CmsFormBundle\Twig;
 
 use B2bCode\Bundle\CmsFormBundle\Entity\CmsFormResponse;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 class EmailExtension extends AbstractExtension
 {
@@ -22,7 +23,7 @@ class EmailExtension extends AbstractExtension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('b2b_code_form_response_array', [$this, 'getResponse'], ['is_safe' => ['html']]),
+            new TwigFunction('b2b_code_form_response_array', [$this, 'getResponse'], ['is_safe' => ['html']]),
         ];
     }
 

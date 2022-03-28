@@ -70,13 +70,8 @@ define(function(require) {
                 __('b2bcode.cmsform.ajax.form_respond.success'),
                 {flash: true}
             );
-            
-            if (response.redirectUrl) {
-                window.location.href = response.redirectUrl;
-            } else {
-                // to reset form
-                mediator.execute('refreshPage');
-            }
+            // to reset form
+            mediator.execute('refreshPage');
         },
 
         onErrorHandler: function(response) {
